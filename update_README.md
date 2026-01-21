@@ -4,7 +4,7 @@ This project implements a mean prompt optimization solution based on Mistral 7B 
 
 ## 📋Project Overview
 ### Mistral 7B Prompt Recovery ([Original File](https://www.kaggle.com/code/richolson/mistral-7b-prompt-recovery-version-2))
-The performance is evaluated using sentence-t5-base to compute embedding vectors for submission-ground truth pairs, followed by Sharpened Cosine Similarity (exponent=3) to score each pair, achieving **0.6215** on the public leaderboard and **0.6219** on the private leaderboard.
+The performance is evaluated using sentence-t5-base to compute embedding vectors for submission-ground truth pairs, followed by Sharpened Cosine Similarity (exponent=3) to score each pair – SCS attenuates inflated scores for incorrect answers, with rewrite_prompt entries required to be non-blank (null values cause errors), achieving **0.6215** on the public leaderboard and **0.6219** on the private leaderboard.
 
 -   Direct prompt reconstruction per sample.
     
