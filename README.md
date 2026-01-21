@@ -85,7 +85,7 @@ The script generates a rewrite prompt words submission file (e.g., `submission.c
 
 
 
-## 🔧Key Design Changes in Mistral7B-Mean-Method 
+## 🔧Key Design Changes 
 
 
 ## 1. Mean / Canonical Prompt Introduction
@@ -179,7 +179,7 @@ these sections are removed entirely
 | Failure mode | Hallucinated prompts | Canonical fallback |
 | Competition safety | Medium | High |
 
-`Mistral7B-Mean-Method` intentionally **sacrifices some per-sample expressiveness** in exchange for:
+`Mistral7B-Meanprompt-Method` intentionally **sacrifices some per-sample expressiveness** in exchange for:
 
 -   Lower variance
     
