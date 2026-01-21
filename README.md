@@ -51,9 +51,9 @@ This project is designed to run in Kaggle Notebook environments. Most dependenci
 Only transformers, accelerate and bitsandbytes may need to be added if not present.
 
 ## 📁Dataset
-This project targets the Kaggle competition  
-**LLM Prompt Recovery**.
+This project targets the Kaggle competition **LLM Prompt Recovery**.
 https://www.kaggle.com/competitions/llm-prompt-recovery/data
+
 Required files (CSV or CSV.ZIP):
 
 -   `sample_submission`
@@ -75,6 +75,7 @@ Mistral7B-Mean-Method.ipynb
  **2. Prepare Dataset**
 
 Upload the competition dataset and [mistral-7b-it-v02 model](https://www.kaggle.com/datasets/ahmadsaladin/mistral-7b-it-v02) to `/kaggle/input/` (or adjust the related paths to point to your local dataset path).
+
 
 **3. Run the Script and Get the Output**
 The script generates a rewrite prompt words submission file (e.g., `submission.csv`).
