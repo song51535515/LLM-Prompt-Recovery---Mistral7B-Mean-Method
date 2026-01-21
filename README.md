@@ -1,6 +1,6 @@
-# LLM Prompt Recovery - Mistral7B-Mean-Method
+# LLM Prompt Recovery - Mistral7B-Meanprompt-Method
 
-This project implements a mean prompt optimization solution based on Mistral 7B model for the [LLM Prompt Recovery](https://www.kaggle.com/competitions/llm-prompt-recovery/overview). The `Mistral 7B Prompt Recovery (Version 2)` notebook is the **original baseline**, while `Mistral7B-Mean-Method` is a **modified experimental variant** that introduces a different prompt aggregation and fallback strategy.
+This project implements a mean prompt optimization solution based on Mistral 7B model for the [LLM Prompt Recovery](https://www.kaggle.com/competitions/llm-prompt-recovery/overview). The `Mistral 7B Prompt Recovery (Version 2)` notebook is the **original baseline**, while `Mistral7B-Meanprompt-Method` is a **modified experimental variant** that introduces a different prompt aggregation and fallback strategy.
 
 
 ## 📋Project Overview
@@ -16,7 +16,7 @@ https://www.kaggle.com/code/richolson/mistral-7b-prompt-recovery-version-2
     
 
 
-### Mistral7B-Mean-Method (Modified Version)
+### Mistral7B-Meanprompt-Method (Modified Version)
 **public:0.6556, private:0.6577**
 
 -   Introduces a **mean / canonical prompt strategy**
@@ -70,7 +70,7 @@ Required files (CSV or CSV.ZIP):
  **1. Download the file**
 Download the file and upload it to kaggle
 ```python
-Mistral7B-Mean-Method.ipynb
+Mistral7B-Meanprompt-Method.ipynb
 ```
 
  **2. Prepare Dataset**
@@ -99,7 +99,7 @@ The script generates a rewrite prompt words submission file (e.g., `submission.c
    
     - Sometimes the model cannot reliably deduce prompts
 
-### Mistral7B-Mean-Method (After)
+### Mistral7B-Meanprompt-Method (After)
 A global baseline prompt used as a fallback when the model cannot reliably infer a prompt.
 
 ```python
@@ -116,7 +116,7 @@ base_line = "Please improve this text using the writing style... with maintainin
 -   No post-processing correction
 
 
-### Mistral7B-Mean-Method (After)
+### Mistral7B-Meanprompt-Method (After)
 
 
 Explicitly patches problematic rows **after inference**
@@ -153,7 +153,7 @@ print(f"Estimated {(elapsed_time_per_test * 1500) / 3600} hours for 1500 tests."
 
 ```
 
-### Mistral7B-Mean-Method (After)
+### Mistral7B-Meanprompt-Method (After)
 
 these sections are removed entirely
 
@@ -172,7 +172,7 @@ these sections are removed entirely
 
 ## 4. Shift in Philosophy: Precision → Robustness
 
-| Aspect |Mistral 7B Prompt Recovery  | Mistral7B-Mean-Method |
+| Aspect |Mistral 7B Prompt Recovery  | Mistral7B-Meanprompt-Method |
 |--|--|--|
 | Prompt inference |Fully model-driven  | Model + rule-based |
 | Edge-case handling | None | Explicit |
@@ -199,7 +199,7 @@ Prompt reconstruction (LLM)
 Direct output (no correction)
 
 ```
-**Mistral7B-Mean-Method (Modified)**
+**Mistral7B-Meanprompt-Method (Modified)**
 
 ```python
 Input texts
